@@ -1,0 +1,40 @@
+D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\node_modules\pdf-lib\cjs\api\PDFDocument.js:1163
+                        context = pages[0].node.context;
+                                           ^
+
+TypeError: Cannot read properties of undefined (reading 'node')
+    at PDFDocument.<anonymous> (D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\node_modules\pdf-lib\cjs\api\PDFDocument.js:1163:44)
+    at step (D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\node_modules\pdf-lib\node_modules\tslib\tslib.js:141:27)
+    at Object.next (D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\node_modules\pdf-lib\node_modules\tslib\tslib.js:122:57)
+    at D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\node_modules\pdf-lib\node_modules\tslib\tslib.js:115:75
+    at new Promise (<anonymous>)
+    at Object.__awaiter (D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\node_modules\pdf-lib\node_modules\tslib\tslib.js:111:16)
+    at PDFDocument.embedPages (D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\node_modules\pdf-lib\cjs\api\PDFDocument.js:1147:24)
+    at CsvParser.<anonymous> (D:\Codam\008 - Departamento Criativo\CodamSistemaGeraPdf\server.js:70:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+
+O erro que você está enfrentando indica que há um problema na leitura das propriedades do objeto `node` no arquivo `PDFDocument.js` da biblioteca `pdf-lib`. Esse erro é específico do pacote `pdf-lib` e pode ocorrer devido a incompatibilidades, bugs ou problemas na forma como o arquivo PDF está sendo lido.
+
+Para resolver esse problema, você pode tentar algumas soluções:
+
+1. Verificar as versões do Node.js e do pacote `pdf-lib`:
+   - Verifique se você está usando a versão mais recente do Node.js.
+   - Verifique se você instalou a versão mais recente do pacote `pdf-lib` usando o comando `npm install pdf-lib@latest`.
+
+2. Limpar o cache do Node.js:
+   - Execute o comando `npm cache clean --force` para limpar o cache do Node.js.
+   - Em seguida, reinstale as dependências executando `npm install` novamente.
+
+3. Verificar se o arquivo PDF está corrompido ou possui alguma incompatibilidade:
+   - Tente usar um arquivo PDF diferente para ver se o problema persiste.
+   - Verifique se o arquivo PDF está no formato correto e se é compatível com a biblioteca `pdf-lib`.
+
+4. Pesquisar problemas semelhantes:
+   - Pesquise no repositório do pacote `pdf-lib` no GitHub se há problemas semelhantes relatados ou soluções conhecidas.
+
+Se nenhuma dessas soluções resolver o problema, pode ser necessário considerar o uso de outra biblioteca para manipulação de arquivos PDF ou investigar mais a fundo a causa específica do erro.
+
+Lembre-se também de verificar se todas as dependências do seu projeto estão instaladas corretamente e se você seguiu corretamente as instruções de configuração e uso da biblioteca `pdf-lib` no seu código.
+
+Se precisar de mais ajuda, fique à vontade para perguntar.
